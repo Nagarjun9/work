@@ -2,7 +2,7 @@
 
 MOVIES=("RRR" "DJTILLY" "DJ")
 
-echo "FIrst move is: $MOVIES{movie[0]}"
-echo "Second movie is: $MOVIES{movie[2]}"
-echo "Thried movie is: $MOVIES{movie[@]}"
+echo "FIrst move is: ${MOVIES[0]}"
+echo "Second movie is: ${MOVIES[2]}"
+echo "Thried movie is: ${MOVIES[@]}"
 
