@@ -11,4 +11,4 @@ echo "Please enter Password"
 
 read -s $Password
 
-print "Username is: $1, Password is: $2"
+echo "Username is: $1, Password is: $2"
