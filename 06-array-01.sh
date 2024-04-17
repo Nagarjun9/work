@@ -1,5 +1,5 @@
-MOVIES=("NAGA" "RAJA" "JAN")
+MOVIES=("nag" "ram" "rman")
 
-echo "First movie:  ${MOVIES[0]}"
-echo "first movie:  ${MOVIES[2]}"
-echo "first movie:  ${MOVIES[@]}"
+echo "first movie is: ${MOVIES[1]}"
+echo "FIrst movie is: ${MOVIES[@]}"
+echo "first movie is: ${MOVIES[0]}"
