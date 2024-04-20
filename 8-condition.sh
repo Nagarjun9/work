@@ -28,5 +28,13 @@ then
    echo "give number grater then equal to 10"
  else 
    echo "give number not grater then equal to 10"
-fi  
+fi
+
+if [ $NUMBER -le 10 ]
+then 
+   echo "give number less then equal to 10"
+else 
+   echo "give number not less then equal to 10"
+fi 
+
 echo " number of variable passed $#"
