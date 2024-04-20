@@ -9,7 +9,7 @@
 #i need install dnf install git -y
 
 
-USER=(id -u)
+USER=$(id -u)
 
 if [ $USER -ne 0 ]
 then 
