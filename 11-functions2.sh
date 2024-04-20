@@ -22,10 +22,10 @@ VALIDATION(){
 
 if [ $USERID -ne 0]
 then 
-    echo "you are not a superuser please use root crediantails"
+    echo -e  "you are not a $G superuser $N please use $R root $N crediantails"
     exit 1
 else
-    echo "you are a super user"
+    echo -e "you are a $G super user $N"
 fi
 
 dnf remove mysql -y &>>LOGFILE
