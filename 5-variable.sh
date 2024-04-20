@@ -1,11 +1,13 @@
-#!/bin/bash 
+#1/bin/bash
 
-echo "please enter your Username"
+# i am creating this file enter username & password
 
-read -s USERNAME 
+echo "please enter the Username"
 
-echo "please enter your Password"
+read -s USERNAME  #we are giving the username
 
-read -s PASSWORD
+echo "please enter the Password" 
+
+read -s PASSWORD  #we are giving password -s not visible 
 
 echo "Username is: $USERNAME, Password is: $PASSWORD"
