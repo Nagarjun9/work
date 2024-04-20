@@ -15,6 +15,6 @@ if [ $? -ne 0]
 then 
     echo " deinstalation of your mysql..failed"
     exit 1
-then 
+else  
     echo " deinstalation of your mysql...success"
 fi 
