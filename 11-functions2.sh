@@ -40,3 +40,6 @@ VALIDATION $? "instalation of mysql"
 dnf install git -y &>>LOGFILE
 VALIDATION $? "instalation of git"
 
+
+
+
