@@ -8,3 +8,6 @@ then
 else 
     echo "given number is less then 10"
 fi
+
+
+echo " number of variable passed $#"
