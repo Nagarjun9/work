@@ -20,7 +20,7 @@ VALIDATION(){
     fi
 }
 
-if [ $USERID -ne 0]
+if [ $USERID -ne 0 ]
 then 
     echo -e  "you are not a $G superuser $N please use $R root $N crediantails"
     exit 1
