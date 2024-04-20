@@ -2,20 +2,19 @@
 
 USERID=$(id -u)
 
-if [ $USERID -ne 0 ]
+if [ $USERID -ne 0]
 then 
-    echo "your are not a superuser please run root user"
+    echo " you are not super user please use root crediantional"
     exit 1
 else
-    echo "you are a super user"
-fi
+    echo "you are super user"
 
-dnf remove mysql -y
+dnf remove mysql -y 
 
-if [ $? -ne 0 ]
+if [ $? -ne 0]
 then 
-    echo "deinstalation of mysql...failed"
+    echo " deinstalation of your mysql..failed"
     exit 1
-else 
-    echo "deinstalation of mysql...success"
+then 
+    echo " deinstalation of your mysql...success"
 fi 
