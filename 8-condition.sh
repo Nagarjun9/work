@@ -9,7 +9,7 @@ else
     echo "given number is less then 10"
 fi
 
-if [ $NUMBER -lt 10]
+if [ $NUMBER -lt 10 ]
 then 
    echo "given number is less then 10"
 else
