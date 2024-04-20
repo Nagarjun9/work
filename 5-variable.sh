@@ -12,7 +12,8 @@ read -s PASSWORD  #we are giving password -s not visible
 
 echo "Username is: $USERNAME, Password is: $PASSWORD" #what are the password enter visbel to us i use echo 
 
-echo "please enter the lookname"
+#visble to password when enter the password 
+echo "please enter the lockname"
 
 read LOCKNAME
 
