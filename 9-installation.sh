@@ -8,7 +8,7 @@
 #i need install dnf install mysql -y 
 #i need install dnf install git -y
 
-USERID=$(id -u -ne 0)
+USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
 then 
