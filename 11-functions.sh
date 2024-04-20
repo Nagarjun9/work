@@ -20,8 +20,15 @@ else
     echo "you are a super user"
 fi 
 
+dnf remove mysql -y 
+VALIDATION $? "deinstalation of mysql"
+
+dnf remove git -y
+VALIDATION $? "deinstalation of git"
+
 dnf install mysql -y 
 VALIDATION $? "instalation of mysql"
 
-dnf install git -y
+dnf install git -you
 VALIDATION $? "instalation of git"
+
