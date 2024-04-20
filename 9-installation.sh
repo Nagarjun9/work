@@ -8,6 +8,25 @@
 #i need install dnf install mysql -y 
 #i need install dnf install git -y
 
+USERID=$(id -u -ne 0)
+
+if [ $USERID -ne 0 ]
+then 
+    echo "you are a not super user please run the scrpt with root user"
+    exit 1
+else 
+    echo "you are super user"
+fi
+
+
+
+
+
+
+
+
+
+
 
 USER=$(id -u)
 
