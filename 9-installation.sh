@@ -18,8 +18,25 @@ else
     echo "you are super user"
 fi
 
+dnf install mysql -y
 
+if [ $? -ne 0 ]
+then 
+    echo "you run commend ...failed"
+    exit 1
+else 
+    echo "you run commend is succesful"
+fi 
 
+dnf install git -y
+
+if[ $? -ne 0 ]
+then 
+    echo "instalation of git failed"
+    exit 1
+else 
+    echo "instalation of git success"
+fi 
 
 
 
