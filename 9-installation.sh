@@ -13,27 +13,27 @@ USER=(id -u)
 
 if [ $USER -ne 0 ]
 then 
-   echo "please run the script with root user"
-   exit 1 # manualy exit
+    echo "please run the script with root user"
+    exit 1 # manualy exit
 else 
-   echo "you are a super user"
+    echo "you are a super user"
 fi 
 
 dnf install mysql -y 
 
 if [ $? -ne 0 ]
 then 
-   echo "instalation of mysql...failer"
-   exit 1
+    echo "instalation of mysql...failer"
+    exit 1
 else 
-   echo "instalation of mysql success"
+    echo "instalation of mysql success"
 fi 
 
 dnf install git -y 
 
 if [ $? -ne 0 ]
 then 
-   echo "instalation of git...failed"
+    echo "instalation of git...failed"
 else 
-   echo "instalation of git...success"
+    echo "instalation of git...success"
 fi
