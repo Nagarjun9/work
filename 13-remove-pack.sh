@@ -6,8 +6,8 @@ TIMESTAME=$(date +%F-%H-%M-%S)
 LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAME.log
 R="\e[31m"
 G="\e[32m"
-B="\e[33m"
-N="\[0m"
+B="\e[34m"
+N="\e[0m"
 
 
 
