@@ -6,7 +6,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 B="\e[34m"
-N="\e[0M"
+N="\e[0m"
 
 VALIDATION(){
     if [ $1 -ne 0 ]
