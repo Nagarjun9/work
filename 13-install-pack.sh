@@ -2,21 +2,26 @@ USERID=$(id -u)
 TIMESTAME=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 |cut -d "." -f1)
 LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAME.log
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+B="\e[34m"
+N="\e[0M"
 
 VALIDATION(){
     if [ $1 -ne 0 ]
     then 
-        echo "$2...failed"
+        echo -e "$R $2...failed $N"
     else 
-        echo "$2...success"
+        echo -e "$G $2...success $N"
     fi 
 }
 
 if [ $USERID -ne 0 ]
 then 
-    echo "you are not a superuser please use root access"
+    echo -e "$R you are not a superuser please use root access $N"
 else 
-    echo "you are a superuser"
+    echo -e "$Y you are a superuser $N"
 fi 
 
 
@@ -32,16 +37,16 @@ fi
 #now we need to check package installed or not 
 
 
-#for i in $@
+for i in $@
 do 
-   echo "package to install: $i"
+   echo -e "$Y package to install: $i  $N"
    dnf list installed $i &>>$LOGFILE
    if [ $? -eq 0 ]
    then 
-       echo "$i alredy installed...SKIPPED"
+       echo -e "$Y $i alredy installed...SKIPPED $N"
     else 
-       echo "$i need to installed"
-       #dnf install $i -y >>$LOGFILE
-       #VALIDATION $? "installlation of $i"
+       #echo "$i need to installed"
+       dnf install $i -y &>>$LOGFILE
+       VALIDATION $? "installlation of $i"
     fi 
 done 
