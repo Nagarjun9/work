@@ -32,7 +32,7 @@ fi
 #now we need to check package installed or not 
 
 
-for i in $@
+#for i in $@
 do 
    echo "package to install: $i"
    dnf list installed $i &>>$LOGFILE
