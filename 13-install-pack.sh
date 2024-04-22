@@ -43,9 +43,9 @@ do
    dnf list installed $i &>>$LOGFILE
    if [ $? -eq 0 ]
    then 
-       echo -e "$Y $i alredy installed...SKIPPED $N"
+       echo -e "$G $i alredy installed...SKIPPED $N"
     else 
-       echo "$i need to installed"
+       echo -e " $B $i need to installed $N"
        #dnf install $i -y &>>$LOGFILE
        #VALIDATION $? "installlation of $i"
     fi 
