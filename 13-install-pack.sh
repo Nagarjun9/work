@@ -8,4 +8,11 @@ else
 fi 
 
 
-echo "all variables $@"
+# echo "all variables $@" #if i give outside variables its show 
+
+# now i need to loop the all vaiable use for loop 
+for i in $@
+do 
+   echo "package to install: $i"
+done 
+
