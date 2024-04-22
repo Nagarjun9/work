@@ -41,7 +41,7 @@ do
         echo -e  "$B $i alredy removed $N" 
     fi 
 
-    echo -e "need to install: $B $i $N"
+    echo -e "need to install:$B $i $N"
     dnf list installed $i -y &>>$LOGFILE
     if [ $? -ne 0 ]
     then 
