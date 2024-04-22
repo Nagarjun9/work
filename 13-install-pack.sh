@@ -9,7 +9,7 @@ VALIDATION(){
         echo "$2...failed"
     else 
         echo "$2...success"
-    done 
+    fi 
 }
 
 if [ $USERID -ne 0 ]
@@ -38,7 +38,7 @@ do
    dnf list installed $i &>>$LOGFILE
    if [ $i -eq o ]
    then 
-       echo " $i alredy installed...SKIPPED"
+       echo "$i alredy installed...SKIPPED"
     else 
        echo "$i need to installed"
        #dnf install $i -y >>$LOGFILE
