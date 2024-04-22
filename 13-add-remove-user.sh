@@ -13,9 +13,9 @@ N="\e[0m"
 VALIDATION(){
     if [ $1 -ne 0 ]
     then 
-        echo "$2...failed"
+        echo -e "$G $2 $N...$Y failed $N"
     else 
-        echo "$2...success"
+        echo -e "$G $2 $N...$B success $N"
     fi 
 }
 
