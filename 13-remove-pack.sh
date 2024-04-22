@@ -1,38 +1,43 @@
+#!/bin/bash 
+
 USERID=$(id -u)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 TIMESTAME=$(date +%F-%H-%M-%S)
 LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAME.log
-
+R="\e[31m"
+G="\e[32m"
+B="\e[33m"
+N="\0m"
 
 
 
 VALIDATION(){
     if [ $1 -ne 0 ]
     then 
-        echo "$2...failed"
+        echo -e "$R $2...failed $N"
     else 
-        echo "$2...succes"
+        echo -e "$G $2...succes $N"
     fi  
 }
 
 
 if [ $USERID -ne 0 ]
 then 
-    echo "you are not a supper user please user root crediantials"
+    echo -e "$R you are not a supper user please user root crediantials $N"
 else 
-    echo "you are a super user"
+    echo -e "$B you are a super user $N"
 fi 
 
 
 for i in $@
 do 
-   echo "need to remove: $i"
+   echo "need to remove:$G $i $N"
    dnf list installed $i -y &>>$LOGFILE
    if [ $? -eq 0 ]
    then 
         dnf remove $i -y &>>$LOGFILE
         VALIDATION $? "removeing of $i"
     else 
-        echo "$i alredy removed" 
+        echo -e  "$B $i alredy removed $N" 
     fi 
 done 
