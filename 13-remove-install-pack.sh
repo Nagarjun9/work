@@ -51,3 +51,5 @@ do
         echo -e "$G $i $N alredy installed"
     fi 
 done 
+
+#sudo sh 13-remove-pack.sh mysql python gcp
