@@ -41,3 +41,12 @@ do
         echo -e  "$B $i alredy removed $N" 
     fi 
 done 
+
+#sudo sh 13-remove-pack.sh mysql python gcp
+ #you are a super user
+#need to remove: mysql
+ #mysql alredy removed
+#need to remove: python
+ #python alredy removed
+#need to remove: gcp
+ #gcp alredy removed

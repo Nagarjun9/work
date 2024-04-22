@@ -49,3 +49,13 @@ do
      echo -e "$Y $i $N user already remove...SKIPPING "
   fi 
 done 
+
+# sudo sh 13-add-remove-user.sh RAJ RAM NAG DEE TEJ ---commend 
+#output 
+# you are a superuser
+#need to crate user: RAJ
+# user already exit...SKIPPING
+# need to remove user:  RAJ
+# removing the RAJ user ... success
+# need to crate user: RAM
+# user already exit...SKIPPING

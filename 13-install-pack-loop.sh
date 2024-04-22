@@ -52,3 +52,14 @@ do
        VALIDATION $? "installlation of $i"
     fi 
 done 
+
+
+
+#sudo sh 13-install-pack.sh  mysql git python
+# you are a superuser
+ #package to install: mysql
+ #mysql alredy installed...SKIPPED
+ #package to install: git
+ #git alredy installed...SKIPPED
+ #package to install: python
+ # python need to installed
