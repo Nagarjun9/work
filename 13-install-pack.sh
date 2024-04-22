@@ -43,4 +43,5 @@ do
        echo "$i need to installed"
        #dnf install $i -y >>$LOGFILE
        #VALIDATION $? "installlation of $i"
+    fi 
 done 
