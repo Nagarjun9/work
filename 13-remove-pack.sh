@@ -31,7 +31,7 @@ fi
 
 for i in $@
 do 
-   echo "need to remove:$G $i $N"
+   echo -e "need to remove:$G $i $N"
    dnf list installed $i -y &>>$LOGFILE
    if [ $? -eq 0 ]
    then 
