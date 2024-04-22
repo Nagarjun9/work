@@ -16,6 +16,7 @@ VALIDATION(){
         echo "$2...failed"
     else 
         echo "$2...success"
+    fi 
 }
 
 
