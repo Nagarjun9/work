@@ -38,4 +38,14 @@ do
   else 
       echo -e "$B user already exit...SKIPPING $N"
   fi 
+  
+  echo -e "$R need to remove user:$N $G $i $N"
+  id $i &>>$LOGFILE
+  if [ $? -eq 0 ]
+  then 
+     userdel $i &>>$LOGFILE
+     VALIDATION $? "removing the $i user"
+  else
+     echo -e "$Y $i $N user already remove...SKIPPING "
+  fi 
 done 
