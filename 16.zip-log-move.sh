@@ -1,6 +1,9 @@
 #!/bin/bash 
 
 SOURCE_DIRECTORY=/tmp/app_dir
+$TARGET_DIRECTORY=/tmp/app_dir/zip-move
+
+FIND_LOCATION=$(find / -type d -iname "zip-move") $>>LOCATION
 
 R="\e[31m"
 G="\e[32m"
@@ -30,5 +33,7 @@ FILE1=$(find $SOURCE_DIRECTORY -name "*.gz" -mtime +14)
 while IFS= read -r line 
 do 
   echo "move the files: $line"
-  mv $line /tmp/app_dir/zip-move
+  mv $line $LOCATION
 done <<<$FILE1 
+
+#LOCATION=$(find / -type d -iname "zip-move")
