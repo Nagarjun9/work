@@ -37,7 +37,7 @@ FILE1=$(find $SOURCE_DIRECTORY -name "*.gz" -mtime +14)
 
 while IFS= read -r line 
 do 
-  echo -e "$Y move the files: $line &N"
+  echo -e "$Y move the files: $line to $FIND_LOCATION $N" 
   mv $line $FIND_LOCATION &>>$LOGFILE
 done <<<$FILE1 
 
