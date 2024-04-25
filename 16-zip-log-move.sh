@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-#direct directory give and gip, move the files 
+#direct directory give and gip the files, move the files 
 SOURCE_DIRECTORY=/tmp/app_dir
 TARGET_DIRECTORY=/tmp/app_dir/zip-move
 
@@ -47,25 +47,20 @@ done <<<$FILE1
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ==========================================
 
-#location to find & zip, move script 
+#location to find & zip the files , move the zip the file to diffrent location  
+
+USERID=$(id -u)
+
+if [ $USERID -ne 0 ]
+then 
+    echo "you are not a super user please use root access"
+else 
+    echo "you are a superuser"
+fi 
+
+
 
 SOURCE_LOCATION=$(find / -type d -iname "app_dir") 
 FIND_LOCATION=$(find / -type d -iname "zip-move") # find the location of zip-move folder 
