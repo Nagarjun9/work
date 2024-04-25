@@ -29,11 +29,12 @@ do
   #echo "Deleting file: $line"
 #  rm -rf $line  # remove the file 
    echo -e "$G gziping file: $line $N" &>>$LOGFILE
-   gzip $line-$TIMESTAME &>>$LOGFILE #gzip the file 
+   gzip $line &>>$LOGFILE #gzip the file 
+   mv *.gz *.gz-$TIMESTAME  &>>$LOGFILE
 
 done <<<$FILE 
 
-FILE1=$(find $SOURCE_DIRECTORY -name "*.gz" -mtime +14)
+FILE1=$(find $SOURCE_DIRECTORY -name "*.gz*" -mtime +14)
 
 while IFS= read -r line 
 do 
