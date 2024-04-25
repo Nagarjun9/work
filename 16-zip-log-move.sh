@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 SOURCE_DIRECTORY=/tmp/app_dir
-$TARGET_DIRECTORY=/tmp/app_dir/zip-move
+#$TARGET_DIRECTORY=/tmp/app_dir/zip-move
 
 FIND_LOCATION=$(find / -type d -iname "zip-move") &>>LOCATION
 
@@ -28,7 +28,7 @@ while IFS= read -r line
 do 
   #echo "Deleting file: $line"
 #  rm -rf $line  # remove the file 
-   echo -e "$G gziping file: $line $N"
+   echo -e "$G gziping file: $line $N" &>>$LOGFILE
    gzip $line &>>$LOGFILE #gzip the file 
 
 done <<<$FILE 
@@ -37,8 +37,8 @@ FILE1=$(find $SOURCE_DIRECTORY -name "*.gz" -mtime +14)
 
 while IFS= read -r line 
 do 
-  echo -e "$Y move the files: $line to $FIND_LOCATION $N" 
-  mv $line $FIND_LOCATION &>>$LOGFILE
+  echo -e "$Y move the files: $line to $FIND_LOCATION $N" &>>$LOGFILE 
+  mv $line $FIND_LOCATION  &>>$LOGFILE
 done <<<$FILE1 
 
 #LOCATION=$(find / -type d -iname "zip-move")
