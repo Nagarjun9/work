@@ -34,7 +34,7 @@ do
    mv *.gz *.gz-$TIMESTAME  &>>$LOGFILE
 done <<<$FILE 
 
-FILE1=$(find $SOURCE_DIRECTORY -name "*.gz*" -mtime +14)
+FILE1=$(find $SOURCE_LOCATION -name "*.gz*" -mtime +14)
 
 while IFS= read -r line 
 do 
