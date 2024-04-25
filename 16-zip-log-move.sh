@@ -29,7 +29,7 @@ do
   #echo "Deleting file: $line"
 #  rm -rf $line  # remove the file 
    echo -e "$G gziping file: $line $N" &>>$LOGFILE
-   gzip $line &>>$LOGFILE #gzip the file 
+   gzip $line-$TIMESTAME &>>$LOGFILE #gzip the file 
 
 done <<<$FILE 
 
