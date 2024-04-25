@@ -20,5 +20,6 @@ FILE=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
 while IFS= read -r line 
 do 
   echo "Deleting file: $line"
-  rm -rf $line 
+#  rm -rf $line  # remove the file 
+gzip $line  #gzip the file 
 done <<<$FILE 
