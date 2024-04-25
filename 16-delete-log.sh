@@ -19,7 +19,16 @@ FILE=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
 
 while IFS= read -r line 
 do 
-  echo "Deleting file: $line"
+  #echo "Deleting file: $line"
 #  rm -rf $line  # remove the file 
-gzip $line  #gzip the file 
+   echo "gziping file: $line"
+   gzip $line  #gzip the file 
 done <<<$FILE 
+
+FILE1=$(find $SOURCE_DIRECTORY -name "*.gz" -mtime +14)
+
+while IFS= read -r line 
+do 
+  echo "move the files: $line"
+  mv $line /tmp/app_dir/zip-move
+done <<<$FILE1 
