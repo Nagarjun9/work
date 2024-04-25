@@ -1,9 +1,10 @@
 #!/bin/bash 
 
-SOURCE_DIRECTORY=/tmp/app_dir
+#SOURCE_DIRECTORY=/tmp/app_dir
 #$TARGET_DIRECTORY=/tmp/app_dir/zip-move
 
-FIND_LOCATION=$(find / -type d -iname "zip-move") &>>LOCATION
+SOURCE_LOCATION=$(find / -type d -iname "app_dir") 
+FIND_LOCATION=$(find / -type d -iname "zip-move") # find the location of zip-move folder 
 
 R="\e[31m"
 G="\e[32m"
@@ -22,7 +23,7 @@ else
    echo " you need to create the directory "
 fi 
 
-FILE=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
+FILE=$(find $SOURCE_LOCATION -name "*.log" -mtime +14)
 
 while IFS= read -r line 
 do 
@@ -31,7 +32,6 @@ do
    echo -e "$G gziping file: $line $N" &>>$LOGFILE
    gzip $line &>>$LOGFILE #gzip the file 
    mv *.gz *.gz-$TIMESTAME  &>>$LOGFILE
-
 done <<<$FILE 
 
 FILE1=$(find $SOURCE_DIRECTORY -name "*.gz*" -mtime +14)
