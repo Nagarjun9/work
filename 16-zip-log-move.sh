@@ -3,7 +3,7 @@
 SOURCE_DIRECTORY=/tmp/app_dir
 $TARGET_DIRECTORY=/tmp/app_dir/zip-move
 
-FIND_LOCATION=$(find / -type d -iname "zip-move") $>>LOCATION
+FIND_LOCATION=$(find / -type d -iname "zip-move") &>>LOCATION
 
 R="\e[31m"
 G="\e[32m"
