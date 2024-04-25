@@ -8,7 +8,7 @@ Y="\e[33m"
 N="\e[34m"
 
 
-IF [ -d $SOURCE_DIRECTORY ]
+if [ -d $SOURCE_DIRECTORY ]
 then
    echo "you source directory exits"
 else 
