@@ -33,7 +33,7 @@ FILE1=$(find $SOURCE_DIRECTORY -name "*.gz" -mtime +14)
 while IFS= read -r line 
 do 
   echo "move the files: $line"
-  mv $line $LOCATION
+  mv $line $FIND_LOCATION
 done <<<$FILE1 
 
 #LOCATION=$(find / -type d -iname "zip-move")
