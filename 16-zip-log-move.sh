@@ -45,9 +45,15 @@ done <<<$FILE1
 
 #echo "$LOGFILE"   | mail -s "zip file info" nagarjun676@gmail.com  <$LOGFILE
 
+ mutt -a "/tmp/$LOGFILE" -s "zip logfile" -- nagarjun676@gmail.co
 
-mail -s "zip file info" nagarjun676@gmail.com  <$LOGFILE
+#$ echo "Message body" | mutt -a "/path/to/file.to.attach" -s "subject of message" -- email_address
 
+#$ echo "Message body" | mutt -a "/tmp/16-zip-log-move-2024-04-27-09-39-59.log" -s "attachedfile" -- nagarjun676@gmail.com 
+
+#mail -s "zip file info" nagarjun676@gmail.com  <$LOGFILE
+
+ #mutt -s "Test Email" nagarjun676@gmail.com < /dev/null 
 
 
 #==========================================
