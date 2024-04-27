@@ -17,3 +17,5 @@ done <<$DISKSPACE
 echo -e "Massage usage: $MASSAGE
 
 echo "$MASSAGE" | mail -s "Diskusage" nagarjun67@gmail.com 
+###
+
