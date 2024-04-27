@@ -43,11 +43,14 @@ done <<<$FILE1
 
 #LOCATION=$(find / -type d -iname "zip-move")
 
+#echo "$LOGFILE"   | mail -s "zip file info" nagarjun676@gmail.com  <$LOGFILE
+
+
+mail -s "zip file info" nagarjun676@gmail.com  <$LOGFILE
 
 
 
-
-==========================================
+#==========================================
 
 #location to find & zip the files , move the zip the file to diffrent location  
 
