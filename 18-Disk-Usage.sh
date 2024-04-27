@@ -34,11 +34,8 @@ do
    FOLDER=$( echo $line | awk -F " " '{print $NF}')
   if [ $DISKUSAGE -ge $USAGE ]
   then 
-      MASSAGE+=$FOLDER is more then $THROSHOULD, Current usage: $USAGE \n"
+      MASSAGE+="$FOLDER is more then $THROSHOULD, Current usage: $USAGE \n"
   fi
 done <<<$DISKUSAGE
 
 echo "$MASSAGE" | mail -s "Diskusage1" nagarjun676@gmail.com 
-
-
-
