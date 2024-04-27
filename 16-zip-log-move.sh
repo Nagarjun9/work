@@ -101,4 +101,6 @@ do
   mv $line $FIND_LOCATION  &>>$LOGFILE
 done <<<$FILE1 
 
+echo "$LOGFILE"   | mail -s "zip file info" nagarjun676@gmail.com
+
 #LOCATION=$(find / -type d -iname "zip-move")
